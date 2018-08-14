@@ -1,0 +1,353 @@
+==============Introduction=======================
+What?
+    Python is a widely used general-purpose, high-level programming language.
+    Its design philosophy emphasizes code readability, and its syntax allows programmers to express 
+    concepts in fewer lines of code than would be possible in languages such as C. 
+    The language provides constructs intended to enable clear programs on both a small and large scale.
+
+Why?
+    Python supports multiple programming paradigms, including object-oriented, 
+    imperative and functional programming or procedural styles. 
+    It features a dynamic type system and automatic memory management and 
+    has a large and comprehensive standard library.
+    
+Is scriptable? 
+    Yeah!!! it's a little bit of both.  The actual Python code is compiled into Python bytecode.  
+    The bytecode is interpreted.
+    
+    FOSS (Free and Open Source Software)
+    OOPS (Object Oriented Programming Language)
+    Imperative i.e., computation in terms of statements
+    Functional Programming i.e., computation in terms of Mathematical functions
+    Procedural Programming i.e., step-­by­-step Programming
+    Often used as scripting Language
+    Community based Development
+    Exceptional Handling, implemented
+    Support for garbage collection and Memory Management.
+  
+  
+
+
+==============Data-Types=========================
+
+
+
+Numbers
+	INT     ...-2, -1, 0, 1, 2...
+	FLOAT   ...-2.0, -1.0, 0.0, 1.0, 2.0...
+
+	type(<var-name>)
+	isinstance(<var-name>, <data-type>) -> True/False
+	int(<var-name>);float(<var-name>); -> Convert
+	id(<var-name>)
+	+, -, *, /, //, %, **, <, >, ==, !=, AND, OR, NOT ->Operations
+	Order -> Parenthesis, Exponentiation, Multiplication, Division, Addition, Subtraction
+
+Strings
+	Sequence of chars (array)
+	Left->Right Positioning
+		eg: a='anil' a[0]=a, a[1]=n...
+	Python-II -> ASCII
+	Python-III -> UNICODE
+	' ' or " " can be used i.e '=="(but need to be condsistent)
+		e.g: a, b = 'anil', "a good boy"
+		     print(a, 'is', b) => anil is a good boy
+		     print("a, 'is', b") => a, 'is', b
+		     print("a, 'is', b') => error
+	len(<varname>)
+	+ Concatenation
+	*<number> Repetition
+	str(<var>) -> Conversion
+	String Slicing
+		 0 1 2 3 4 5 6 7 8 9
+		+-+-+-+-+-+-+-+-+-+-+
+		|A|n|i|l| |K|u|m|a|r|
+		+-+-+-+-+-+-+-+-+-+-+
+	       -10-9-8-7-6-5-4-3-2 -1 
+		a='Anil Kumar'
+		>>> a[0:10]
+		    'Anil Kumar'
+		>>> a[1:10]
+		    'nil Kumar'
+		>>> a[0:9]
+		    'Anil Kuma'
+		>>> a[:8]
+		    'Anil Kum'
+		>>> a[8:]
+		    'ar'
+	<var-name>.find()     -> find a substring
+	<var-name>.replace()  -> replace  "
+	<var-name>.split()    -> cuts a string @ delimiter o/p->a list
+	<var-name>.upper()    -> convert to upper case
+	<var-name>.lower()    -> convert to lower case
+
+    String Formatting
+        String formatting expressions from C can be used
+        e.g.: s= "%s has %d vacation days left" % ('Anil', 10) -- C
+        
+        In Python 
+         e.g.: s= "{0} has {1} vacation days left".format('Tim', 14)
+
+         
+    Obtaining Keyboard Input
+        Sys - STDIN   [keyboard]  --Inputs
+              STDOUT  [Screen]    --Output
+              
+        input                     --read input 
+        
+        >                         --Redirect output
+    
+=============================================================
+Sample Script:
+	User_Value = input("Hey, Enter a number: ")
+	print("You have entered number: ", User_Value, ";And it belongs to Data Type", type(User_Value))
+	print(User_Value, "'s power of 8 is: ", int(User_Value)**8)
+	print("Thanks for the script")
+=============================================================
+
+
+Tuples
+	A sequence of strings/lists -- An ordered set of data -- A single row in DB table
+	Immutable / Static program data -- This is the difference b/w tuples&lists
+	a=('a', 'anil', 'learn', 'python', 1, 1.01)
+
+	Slice in tuple is same as String slice difference is here each element/string/object is considered but in string each string is considered
+
+	Cannot modify elements	-append()
+				-extend()
+				-insert()
+				-remove()
+				-pop()
+
+	len()
+	Type Conversion:	list()
+				tuple()
+	search/index/count/in
+
+	Why Tuples?
+		Faster than lists
+		Can 'write protect' data
+		Tuples can be used as 'Dictionary' Keys
+
+Lists
+	Mutable sequenses data-structure
+	a=[1,'Anil', "Hi", 1.101]
+	a.append/count/extend/index/linsert/pop/remove/reverse/sort
+	slice
+
+Dictionaries
+	Mutable, unordered set of KEY:VALUE pairs
+		   |
+		   +--> Not a Sequence (in lists and tuples has indexing here keys)
+
+	Also called as AssociatedArray/HashTables
+
+	num_dict = {'one':'ek', 'two':'do', 'three':'theen'}
+	
+	Keys & Values can be any combination of immutable data-types: strings, integers, or tuples
+	
+	Lists cannot be used as Keys/Values as they are mutable
+
+	keys/items/values/pop/clear
+
+	New key/value can be assigned (=)
+	num_dict[four]='chaar'
+
+=================================================================
+Script:
+
+
+=================================================================
+    SET
+        Valueless dicts (keys only)
+        Good for isolating uniques
+        'set' operations -union
+                         -intersection
+                         -diff
+                         
+        membership testing -in
+                           -issubset
+                           -issuperset
+                           
+    LIST Comprehension
+        map()
+        modifying lists
+
+
+
+
+
+
+=========Documenting Your Code============	
+	Statements:
+		and, if, elif, else, for....
+		\ is line continuation and escape
+
+		Simple Vs Compound statements
+				|
+				+-->Header:
+					indentation space-->Suite [Best Practice is 4 spaces]
+									Not Tabs
+		Python Enhancement Proposal [PEP] google it --> you can import this with 'import'/easter egg module
+
+	Variable Rules
+		Form: [Letter_]+[letter, digits, _]
+		Case sensitive
+		No reserved words are allowed
+		__X__ = System defined names
+		_ = repeats last expression(int.mode)
+		name= variale object = data(type)
+
+	Comments & Documentation
+		# - comment on that line
+		  - Also for octothrope
+
+		So you can use triple quoted docs --> Multiline
+		'''
+		Anil Kumar A
+		Hello
+		'''
+
+		__doc__
+		dir()
+		help()
+
+	Online Help
+		Py Doc (StdLib)
+		help()
+		PyDoc HTML viewer
+
+
+
+
+
+====================Control Flow=========================
+
+
+    IF
+        Decision-making, branching, conditional logic
+            if <test01>:
+                <statement-block>
+            elif <test02>:
+                <statement-block>
+            else: #Optional
+                <statement-block>
+        Operators:
+            ==, !=, <, >, <=, =>, and, or, not
+            
+        Dictionaries can be used  when you want 'SWITCH'
+
+    Boolean Logic
+        X or Y
+        X and Y
+        not X
+
+        X is (in) Y
+        X is not Y
+        
+    Break+Continue
+        break: Jumps out of closest loop
+               Not 'if's
+               Only 'for/while'
+               
+        continue: Jumps to the header of the closest enclosing 
+        
+        e.g.
+            while <test1>:
+                <statements>
+                if <test2>:
+                    break #exit loop, skip else
+                if <test3>:
+                    continue #go to test1
+                    
+            else:
+                <statement2> #proceed if no 'break'
+
+    FOR loop
+        .Iterable: string, list, tuple, dictionary
+        .Counting
+        .Can be nested for/if
+        .Excellent for scanning files
+        .range() functions --> steps -> 5 or [0-5]
+        
+        for var in iterable:
+            # loop body using var
+        else:
+            # invoked if no 'break'
+            
+    WHILE loop
+        .Repeatedly loop until test == false
+        .While True --> infinite loop
+            -if
+            -break
+            -continue
+            
+        while <test>: #must eval to T to continue
+            <statement block>
+        else: #optional
+            <statement block> #run in absence of 'break'
+            
+
+=============FUNCTIONS==============
+    Definition
+        .Keyword 'def' 'name' followed by ()
+        .input parameters/arguments should be placed in ()
+        .1st statement of a function can be an optional statement. It is a documentation string/docstring
+        .this functional block starts with ':'
+        .Return statement (optional)
+        
+    Syntax
+    -----------------------------------------
+        def test_function(parameters):
+            "This is test_function"
+            function_suite
+            return [expression]
+    -----------------------------------------
+    
+    Calling Function
+        Test_Function(parameters)
+        
+    
+============Files================
+Syntax: file object = open(file_name [, access_mode][, buffering])
+File Positions - tells the current position(Byte) so that it helps us while opening a file
+
+OS module is required to rename/remove/mkdir/chdir/getcwd/rmdir
+Syntax os.<operation>
+
+
+===========Exception=============
+What is Exception?
+An exception is an event, which occurs during the execution of a program, 
+that disrupts the normal flow of the program's instructions. 
+In general, when a Python script encounters a situation that it can't cope with, 
+it raises an exception. An exception is a Python object that represents an error.
+
+When a Python script raises an exception, 
+it must either handle the exception immediately otherwise it would terminate and come out.
+
+
+
+==========OOP=====================
+The variable empCount is a class variable whose value would be shared among all instances of a this class. 
+This can be accessed as Employee.empCount from inside the class or outside the class.
+
+The first method __init__() is a special method, which is called class constructor or 
+initialization method that Python calls when you create a new instance of this class.
+
+You declare other class methods like normal functions with the exception that the first argument to each method is self. 
+Python adds the self argument to the list for you; you don't need to include it when you call the methods.
+
+Creating instance objects:
+To create instances of a class, you call the class using class name and pass in whatever arguments its __init__ method accepts.
+
+"This would create first object of Employee class"
+emp1 = Employee("Zara", 2000)
+"This would create second object of Employee class"
+emp2 = Employee("Manni", 5000)
+Accessing attributes:
+You access the object's attributes using the dot operator with object. Class variable would be accessed using class name as follows:
+
+emp1.displayEmployee()
+emp2.displayEmployee()
+print "Total Employee %d" % Employee.empCount
